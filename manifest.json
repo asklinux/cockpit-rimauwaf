@@ -1,0 +1,19 @@
+{
+    "version": 1,
+    "Name": "rimauwaf",
+
+    "menu": {
+        "index": {
+            "label": "Rimau WAF",
+            "path": "rimauwaf.html"
+        }
+    },
+
+    "hacks": {
+        "with_networkmanager_needs_root": "yes"
+    },
+
+    "content-security-policy": "default-src 'self' data:"
+
+
+}

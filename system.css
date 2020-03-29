@@ -1,0 +1,1986 @@
+a {
+    cursor: pointer;
+}
+
+.disabled {
+    pointer-events: auto;
+}
+
+.btn {
+    min-height: 26px;
+    min-width: 26px;
+}
+
+.btn.disabled {
+    pointer-events: auto;
+}
+
+.btn.disabled:hover {
+  z-index: auto;
+}
+
+.btn-group, .btn-group-vertical {
+    /* Fix button groups from wrapping in narrow widths */
+    display: inline-flex;
+}
+
+.btn-group-vertical {
+    /* Vertical btn-groups should be vertical */
+    flex-direction: column;
+}
+
+a.disabled {
+    cursor: not-allowed !important;
+    text-decoration: none;
+    pointer-events: none;
+    color: #8b8d8f;
+}
+
+a.disabled:hover {
+    text-decoration: none;
+}
+
+.dropdown-menu > li > a.disabled,
+.dropdown-menu > li > a.disabled:hover,
+.dropdown-menu > li > a.disabled:focus {
+  color: #999999;
+}
+
+.dropdown-menu > li > a.disabled:hover,
+.dropdown-menu > li > a.disabled:focus {
+  text-decoration: none;
+  background-color: transparent;
+  background-image: none;
+  border-color: transparent;
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+  cursor: default;
+}
+
+/* Limit dropdown menus to 90% of the viewport size */
+.dropdown-menu {
+    height: auto;
+    overflow-x: hidden;
+    max-height: 90vh;
+}
+/* Align these buttons more nicely */
+.btn.fa-minus,
+.btn.fa-plus {
+    padding-top: 4px;
+}
+
+/* HACK: Workaround for https://github.com/patternfly/patternfly/issues/174*/
+
+.page-ct {
+    margin-top: 20px;
+}
+
+.highlight-ct {
+    background-color: #edf8ff;
+}
+
+/* Well and Blankslate */
+
+.curtains-ct {
+    top: 0px;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+}
+
+.panel .well {
+    margin-bottom: 0px;
+    border: none;
+    border-radius: 0px;
+    background-color: #FAFAFA;
+}
+
+.well.blank-slate-pf {
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.05) inset;
+    padding-top: 40px;
+}
+
+.blank-slate-pf .spinner-lg {
+    height: 58px;
+    width: 58px;
+}
+
+/*
+ * Control buttons such as play and stop
+ * Used with .btn .btn-default
+ */
+
+.btn-control-ct,
+.btn-control-ct:hover {
+    background-position: center center;
+    background-size: 16px 16px;
+    background-repeat: no-repeat;
+    background-image: none;
+    -webkit-border-radius: 2;
+    -moz-border-radius: 2;
+    border-radius: 2px;
+    height: 28px;
+    width: 28px;
+    box-shadow: none;
+}
+
+.btn-control-ct {
+    background-color: #eeeeee;
+}
+
+.btn-control-ct:hover {
+   background-color: #e0e0e0;
+}
+
+
+/* On/off switch */
+
+.btn-onoff-ct {
+    margin: 1px 0px;
+    text-transform: uppercase;
+}
+
+.btn-onoff-ct .btn {
+    color: transparent;
+    border-color: #B7B7B7;
+    padding: 2px 6px 1px 6px;
+    background-color: white;
+    background-image: linear-gradient(to bottom, rgb(250, 250, 250) 0px, rgb(237, 237, 237) 100%);
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    width: 37px;
+}
+
+.btn-onoff-ct .btn:first-child {
+    border-right: #00435F;
+}
+
+.btn-onoff-ct .btn:last-child {
+    border-left: #00435F;
+    padding-left: 5px;
+}
+
+.btn-onoff-ct .btn.active {
+    background-image: none;
+    width: 36px;
+}
+
+.btn-onoff-ct .btn.active:first-child {
+    background-color: #0086CF;
+    color: white;
+    border-right: 1px solid #0071b0;
+}
+
+.btn-onoff-ct .btn.active:last-child {
+    color: #000;
+    border-left: 1px solid #d6d6d6;
+}
+
+.btn-onoff-ct .btn.disabled {
+    pointer-events: none;
+    color: transparent !important;
+}
+
+.btn-onoff-ct .btn.active.disabled {
+    background-color: #888 !important;
+    color: white !important;
+}
+
+/* Small list inside a dialog */
+/* Alert fixups */
+
+.modal-content .alert {
+    text-align: left;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.modal-content .alert .fa {
+    position: absolute;
+    left: 10px;
+    top: 6px;
+    font-size: 20px;
+}
+
+.modal-content .alert .pficon {
+    top: 5px;
+}
+
+.alert.alert-danger .fa {
+    color: #af151a;
+}
+
+/* Dialog patterns */
+
+.dialog-wait-ct {
+    margin-top: 3px;
+}
+
+.dialog-wait-ct .spinner {
+    display: inline-block;
+}
+
+.dialog-wait-ct span {
+    vertical-align: 4px;
+    padding-left: 10px;
+}
+
+.dialog-list-ct {
+    max-height: 230px;
+    overflow-x: auto;
+    border: 1px solid #CCC;
+    margin-bottom: 0px;
+}
+
+/* HACK: https://github.com/patternfly/patternfly/issues/255 */
+input[type=number] {
+  padding: 0 0 0 5px;
+}
+
+/* Make a dialog visible */
+.dialog-ct-visible {
+    display: block;
+}
+
+.ct-select {
+    --dropdown-image: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%2237%22 height=%2224%22 viewBox=%220 0 9.487 6%22%3E%3Cpath fill=%22%234d5258%22 d=%22M5.623 2.831l-.09-.09c-.02-.02-.063-.02-.083 0l-.706.707-.707-.708c-.02-.02-.063-.018-.082.001l-.091.09c-.02.02-.02.063 0 .082l.838.838c.02.02.063.02.082 0l.84-.837c.02-.02.019-.063-.001-.083z%22/%3E%3C/svg%3E%0A");
+    --dropdown-background: linear-gradient(#fafafa, #ededed);
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    max-width: 100%;
+    padding: 1px 28px 1px 5px;
+    border: 1px solid #bbb;
+    background: var(--dropdown-image) no-repeat 100% 50%, var(--dropdown-background);
+    box-shadow: 0 2px 3px rgba(3, 3, 3, 0.1);
+    border-radius: 1px;
+    color: #4d5258;
+    cursor: pointer;
+    transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+    font-weight: 600;
+    min-height: 26px;
+}
+
+@-moz-document url-prefix() {
+    /* Accomodate Firefox styling selects with slightly different padding. */
+    .ct-select {
+        padding-left: 1px;
+    }
+}
+
+.ct-select:hover,
+.ct-select:active {
+    --dropdown-background: #f1f1f1;
+}
+
+.ct-select:hover {
+    border-color: #7dc3e8;
+}
+
+.ct-select:focus {
+    border-color: #0088ce; /* pf-blue-400 */
+    /* Outer blue glow */
+    box-shadow: inset 0 1px 1px rgba(3, 3, 3, 0.075), 0 0 8px rgba(0, 136, 206, 0.6);
+    color: #4d5258;
+}
+
+.ct-select:active {
+    box-shadow: inset 0 2px 8px rgba(3, 3, 3, 0.2);
+}
+
+.ct-select optgroup,
+.ct-select option {
+    background-color: #fff;
+}
+/* Form layout */
+:root {
+  --ct-form-layout-columns: 2;
+}
+.ct-form-layout {
+  align-self: start;
+  display: grid;
+  grid-gap: 5px 10px;
+  grid-template-columns: repeat(var(--ct-form-layout-columns), max-content 1fr);
+  place-items: baseline stretch;
+}
+.ct-form-layout > .control-label {
+  align-self: start;
+  text-align: right;
+}
+.ct-form-layout > :not(.control-label):not(hr):not(.ct-form-layout-split):not(.ct-form-layout-full) {
+  grid-column: 2 / -1;
+}
+.ct-form-layout > :not(.ct-form-layout-relax):not(.spinner) {
+  width: auto;
+}
+.ct-form-layout > hr {
+  border: none;
+  grid-column: 1 / -1;
+  height: 10px;
+  margin: 0;
+  padding: 0;
+}
+.ct-form-layout > input[size],
+.ct-form-layout > .ct-validation-wrapper > input[size] {
+  justify-self: start;
+}
+.ct-form-layout input[type=number] {
+  -webkit-appearance: textarea;
+}
+.ct-form-layout > input,
+.ct-form-layout > .ct-validation-wrapper > input,
+.ct-form-layout > textarea,
+.ct-form-layout > .ct-validation-wrapper > textarea,
+.ct-form-layout > select,
+.ct-form-layout > .ct-validation-wrapper > select,
+.ct-form-layout > .bootstrap-select,
+.ct-form-layout > .ct-validation-wrapper > .bootstrap-select,
+.ct-form-layout > .ct-select,
+.ct-form-layout > .ct-validation-wrapper > .ct-select,
+.ct-form-layout > .dropdown,
+.ct-form-layout > .ct-validation-wrapper > .dropdown,
+.ct-form-layout > .combobox-container,
+.ct-form-layout > .ct-validation-wrapper > .combobox-container,
+.ct-form-layout > fieldset,
+.ct-form-layout > .ct-validation-wrapper > fieldset,
+.ct-form-layout > [role=group],
+.ct-form-layout > .ct-validation-wrapper > [role=group],
+.ct-form-layout > [data-field],
+.ct-form-layout > .ct-validation-wrapper > [data-field],
+.ct-form-layout > .form-group,
+.ct-form-layout > .ct-validation-wrapper > .form-group,
+.ct-form-layout > .btn-group,
+.ct-form-layout > .ct-validation-wrapper > .btn-group,
+.ct-form-layout > label.checkbox,
+.ct-form-layout > .ct-validation-wrapper > label.checkbox,
+.ct-form-layout > label.radio,
+.ct-form-layout > .ct-validation-wrapper > label.radio,
+.ct-form-layout > .checkbox-inline,
+.ct-form-layout > .ct-validation-wrapper > .checkbox-inline,
+.ct-form-layout > .radio-inline,
+.ct-form-layout > .ct-validation-wrapper > .radio-inline {
+  margin-top: -3px;
+  margin-bottom: 3px;
+  min-height: 26px;
+  align-self: start;
+}
+.ct-form-layout > :not(.ct-form-layout-relax):not(.spinner) {
+  width: auto !important;
+}
+.ct-form-layout > [role=group],
+.ct-form-layout > .ct-validation-wrapper > [role=group] {
+  align-content: center;
+  align-self: start;
+  display: grid;
+  grid-gap: 5px;
+  justify-content: start;
+  grid-template-columns: repeat(2, auto);
+}
+.ct-form-layout > [role=group].ct-form-layout-vertical > :not(.ct-form-layout-split),
+.ct-form-layout > .ct-validation-wrapper > [role=group].ct-form-layout-vertical > :not(.ct-form-layout-split) {
+  grid-column: 1 / -1;
+}
+.ct-form-layout > [role=group] > .checkbox,
+.ct-form-layout > .ct-validation-wrapper > [role=group] > .checkbox,
+.ct-form-layout > [role=group] > .radio,
+.ct-form-layout > .ct-validation-wrapper > [role=group] > .radio {
+  margin: 0;
+}
+.ct-form-layout > [role=group]:not(.ct-form-layout-relax) > .dropdown,
+.ct-form-layout > .ct-validation-wrapper > [role=group]:not(.ct-form-layout-relax) > .dropdown,
+.ct-form-layout > .ct-validation-wrapper > [data-field]:not(.ct-form-layout-relax) > .dropdown {
+  width: auto !important;
+}
+.ct-form-layout > [role=group]:not(.ct-form-layout-relax) > .ct-select,
+.ct-form-layout > .ct-validation-wrapper > [role=group]:not(.ct-form-layout-relax) > .ct-select,
+.ct-form-layout > .ct-validation-wrapper > [data-field]:not(.ct-form-layout-relax) > .ct-select {
+  width: 100%;
+}
+.ct-form-layout label.checkbox,
+.ct-form-layout label.radio,
+.ct-form-layout .checkbox > label,
+.ct-form-layout .radio > label,
+.ct-form-layout .checkbox-inline,
+.ct-form-layout .radio-inline {
+  display: inline-flex;
+  padding-left: 0;
+  padding-right: 10px;
+  align-items: center;
+}
+.ct-form-layout label.checkbox > input[type="checkbox"],
+.ct-form-layout label.radio > input[type="checkbox"],
+.ct-form-layout .checkbox > label > input[type="checkbox"],
+.ct-form-layout .radio > label > input[type="checkbox"],
+.ct-form-layout .checkbox-inline > input[type="checkbox"],
+.ct-form-layout .radio-inline > input[type="checkbox"],
+.ct-form-layout label.checkbox > input[type="radio"],
+.ct-form-layout label.radio > input[type="radio"],
+.ct-form-layout .checkbox > label > input[type="radio"],
+.ct-form-layout .radio > label > input[type="radio"],
+.ct-form-layout .checkbox-inline > input[type="radio"],
+.ct-form-layout .radio-inline > input[type="radio"] {
+  height: 16px;
+  margin: 5px 0;
+  margin-right: 0.5rem;
+  position: static;
+}
+.ct-form-layout fieldset > .checkbox:first-child,
+.ct-form-layout fieldset > .radio:first-child {
+  margin-top: 0;
+}
+.ct-form-layout fieldset > .checkbox:last-child,
+.ct-form-layout fieldset > .radio:last-child {
+  margin-bottom: 0;
+}
+.ct-form-layout .list-group {
+  margin-bottom: 5px;
+}
+.ct-form-layout > .ct-form-layout-split {
+  grid-column: auto / auto;
+}
+.ct-form-layout > .ct-form-layout-full {
+  grid-column: 1 / -1;
+}
+.ct-form-layout > .has-success:not(.form-group),
+.ct-form-layout > .has-warning:not(.form-group),
+.ct-form-layout > .has-error:not(.form-group) {
+  position: relative;
+  top: -0.5rem;
+}
+.ct-form-layout > .help-block {
+  position: relative;
+  top: -0.5rem;
+}
+.ct-form-layout .ct-form-box {
+  background: #f5f5f5;
+  /* pf-black-150 */
+  border-width: 1px;
+  border-style: solid;
+  border-color: #bbbbbb;
+  /* pf-black-400 */
+  padding: 0.5rem;
+  padding-top: 1rem;
+  width: 100%;
+}
+.modal .ct-form-layout > .control-label {
+  padding-left: 0.5rem;
+}
+.ct-form-layout-stretch {
+  justify-content: stretch !important;
+}
+.ct-form-layout-relax {
+  justify-self: start;
+}
+.modal-dialog.modal-sm .ct-form-layout > .ct-form-layout-split {
+  grid-column: 2 / -1;
+}
+@media (max-width: 640px) {
+  .listing-ct-body,
+  .modal {
+    --ct-form-layout-columns: 1;
+  }
+}
+.ct-form-layout-minmax {
+  grid-template-columns: max-content min-content max-content 1fr;
+}
+.ct-form-layout-maxmin {
+  grid-template-columns: max-content 1fr max-content min-content;
+}
+@media (max-width: 480px) {
+  .listing-ct-body .ct-form-layout,
+  .modal .ct-form-layout {
+    grid-template-columns: initial;
+  }
+  .listing-ct-body .ct-form-layout > *,
+  .modal .ct-form-layout > * {
+    grid-column: auto;
+    max-width: 100%;
+  }
+  .listing-ct-body .ct-form-layout > .control-label,
+  .modal .ct-form-layout > .control-label {
+    padding: 0;
+    text-align: left;
+  }
+  .listing-ct-body .ct-form-layout > .control-label:not(:first-child),
+  .modal .ct-form-layout > .control-label:not(:first-child) {
+    margin: 6px 0 0;
+  }
+  .listing-ct-body .ct-form-layout > hr,
+  .modal .ct-form-layout > hr {
+    height: 12px;
+  }
+}
+.package-list-ct {
+    margin: 1em 0;
+    padding: 0;
+    max-width: 110rem;
+    text-align: left;
+    box-sizing: border-box;
+}
+
+.package-list-ct li {
+    text-align: left;
+    box-sizing: border-box;
+    width: 22rem;
+    padding: 0 1ex;
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.scale-up-ct {
+    animation: dialogScaleUpCt 1s;
+}
+
+@keyframes dialogScaleUpCt {
+    0% {
+        opacity: 0;
+        max-height: 0;
+    }
+    25% {
+        opacity: 0;
+    }
+    50% {
+        max-height: 100vh;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+label.onoff-ct {
+  --switch-width: 40px;
+  --switch-height: 24px;
+  --switch-background: #d1d1d1;
+  /* pf-black-300 */
+  --switch-border-color: transparent;
+  --switch-border-style: solid;
+  --switch-border-width: 1px;
+  --switch-text: inherit;
+  --switch-dot-size: 14px;
+  --switch-dot: #fff;
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  margin-bottom: 0;
+  padding: 1px 0;
+  /* Height is 24px; bump to 26px like other widgets */
+  vertical-align: middle;
+  /* Focus ring */
+  /* Don't show the focus ring for mouse clicks (when hovering) */
+  /* Subtly darken the inner part of the switch on hover */
+}
+label.onoff-ct > .switch-on,
+label.onoff-ct > .switch-off,
+label.onoff-ct > input ~ .switch-toggle,
+label.onoff-ct > input ~ .switch-toggle::after {
+  transition: all 300ms ease-in-out;
+}
+label.onoff-ct > .switch-on,
+label.onoff-ct > .switch-off {
+  color: var(--switch-text);
+  margin-left: 0.5em;
+}
+label.onoff-ct > input {
+  opacity: 0;
+  position: absolute;
+  /* Base toggle graphic */
+  /* Hide unused switch label */
+}
+label.onoff-ct > input ~ .switch-toggle {
+  --switch-dot-offset-x: calc(var(--switch-dot-size)/3 - var(--switch-border-width));
+  --switch-dot-offset-y: calc(50% - 14px / 2);
+  /* Don't let the border draw over the background */
+  background-clip: content-box;
+  background: var(--switch-background);
+  border-radius: var(--switch-height);
+  border: var(--switch-border-width) var(--switch-border-style) var(--switch-border-color);
+  box-shadow: inset 0 0 0 1px transparent;
+  width: var(--switch-width);
+  height: var(--switch-height);
+  display: inline-block;
+  position: relative;
+  margin: 0;
+  cursor: pointer;
+  /* Dot graphic */
+}
+label.onoff-ct > input ~ .switch-toggle::after {
+  background: var(--switch-dot);
+  box-shadow: 0 0 var(--switch-dot-offset-x) rgba(0, 0, 0, 0.2);
+  display: inline-block;
+  content: "";
+  height: var(--switch-dot-size);
+  width: var(--switch-dot-size);
+  border-radius: 50%;
+  top: var(--switch-dot-offset-y);
+  left: var(--switch-dot-offset-x);
+  position: absolute;
+  pointer-events: none;
+}
+label.onoff-ct > input ~ .switch-off {
+  --switch-text: #72767b;
+  /* pf-black-600 */
+}
+label.onoff-ct > input:checked ~ .switch-toggle {
+  --switch-background: #0088ce;
+  /* pf-blue-400 */
+  --switch-dot-offset-x: calc(100% - var(--switch-dot-size) * 1.333333 + var(--switch-border-width));
+}
+label.onoff-ct > input:checked ~ .switch-toggle:last-child {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10.583 6.35'%3E%3Cpath fill='none' stroke='%23fff' stroke-linecap='round' stroke-width='.529' d='M2.252 3.365l.756.758L4.48 2.65' opacity='.75'/%3E%3C/svg%3E");
+}
+label.onoff-ct > input:disabled ~ .switch-toggle {
+  --switch-background: #72767b;
+  /* pf-black-600 */
+  --switch-dot: #d1d1d1;
+  /* pf-black-300 */
+}
+label.onoff-ct > input:disabled ~ * {
+  cursor: not-allowed;
+}
+label.onoff-ct > input:checked ~ .switch-off,
+label.onoff-ct > input:not(:checked) ~ .switch-on {
+  display: none;
+}
+label.onoff-ct :disabled ~ .switch-on,
+label.onoff-ct :disabled ~ .switch-off {
+  --switch-text: #72767b;
+  /* pf-black-600 */
+}
+label.onoff-ct :focus ~ .switch-toggle::before {
+  /* Approximate Chrome's focus ring, for non-Firefox browsers */
+  border: 2px solid rgba(0, 98, 220, 0.4);
+  border-radius: calc(var(--switch-width) - 10px);
+  position: absolute;
+  content: '';
+  top: -4px;
+  bottom: -4px;
+  left: -4px;
+  width: calc(var(--switch-width) + 6px);
+  transition: all 300ms ease-in-out;
+  /* HACK: Keyboard has nothing to transition from, but hover does */
+  /* (as it changes the ring to transparent and back). */
+  /* So we delay the hover to not have the focus ring on hover out. */
+  /* This makes the focus ring show up for keyboard users, but not on a mouse click. */
+  transition-delay: 600s;
+  z-index: 1;
+}
+@-moz-document url-prefix() {
+  label.onoff-ct :focus ~ .switch-toggle::before {
+    /* Approximate Firefox's focus ring, for Firefox only */
+    border: 1px dotted rgba(0, 0, 0, 0.75);
+  }
+}
+label.onoff-ct :focus:hover ~ .switch-toggle::before {
+  border-color: transparent;
+}
+label.onoff-ct:hover :not(:disabled) ~ .switch-toggle {
+  box-shadow: inset 0 1px 5px 1px rgba(0, 0, 0, 0.15);
+}
+h1 label.onoff-ct {
+  vertical-align: bottom;
+}
+/**
+ * Copyright (c) 2014 The xterm.js authors. All rights reserved.
+ * Copyright (c) 2012-2013, Christopher Jeffrey (MIT License)
+ * https://github.com/chjj/term.js
+ * @license MIT
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in
+ * all copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+ * THE SOFTWARE.
+ *
+ * Originally forked from (with the author's permission):
+ *   Fabrice Bellard's javascript vt100 for jslinux:
+ *   http://bellard.org/jslinux/
+ *   Copyright (c) 2011 Fabrice Bellard
+ *   The original design remains. The terminal itself
+ *   has been extended to include xterm CSI codes, among
+ *   other features.
+ */
+
+/**
+ *  Default styles for xterm.js
+ */
+
+.xterm {
+    font-feature-settings: "liga" 0;
+    position: relative;
+    user-select: none;
+    -ms-user-select: none;
+    -webkit-user-select: none;
+}
+
+.xterm.focus,
+.xterm:focus {
+    outline: none;
+}
+
+.xterm .xterm-helpers {
+    position: absolute;
+    top: 0;
+    /**
+     * The z-index of the helpers must be higher than the canvases in order for
+     * IMEs to appear on top.
+     */
+    z-index: 10;
+}
+
+.xterm .xterm-helper-textarea {
+    /*
+     * HACK: to fix IE's blinking cursor
+     * Move textarea out of the screen to the far left, so that the cursor is not visible.
+     */
+    position: absolute;
+    opacity: 0;
+    left: -9999em;
+    top: 0;
+    width: 0;
+    height: 0;
+    z-index: -10;
+    /** Prevent wrapping so the IME appears against the textarea at the correct position */
+    white-space: nowrap;
+    overflow: hidden;
+    resize: none;
+}
+
+.xterm .composition-view {
+    /* TODO: Composition position got messed up somewhere */
+    background: #000;
+    color: #FFF;
+    display: none;
+    position: absolute;
+    white-space: nowrap;
+    z-index: 1;
+}
+
+.xterm .composition-view.active {
+    display: block;
+}
+
+.xterm .xterm-viewport {
+    /* On OS X this is required in order for the scroll bar to appear fully opaque */
+    background-color: #000;
+    overflow-y: scroll;
+    cursor: default;
+    position: absolute;
+    right: 0;
+    left: 0;
+    top: 0;
+    bottom: 0;
+}
+
+.xterm .xterm-screen {
+    position: relative;
+}
+
+.xterm .xterm-screen canvas {
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.xterm .xterm-scroll-area {
+    visibility: hidden;
+}
+
+.xterm-char-measure-element {
+    display: inline-block;
+    visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: -9999em;
+    line-height: normal;
+}
+
+.xterm {
+    cursor: text;
+}
+
+.xterm.enable-mouse-events {
+    /* When mouse events are enabled (eg. tmux), revert to the standard pointer cursor */
+    cursor: default;
+}
+
+.xterm.xterm-cursor-pointer {
+    cursor: pointer;
+}
+
+.xterm.column-select.focus {
+    /* Column selection mode */
+    cursor: crosshair;
+}
+
+.xterm .xterm-accessibility,
+.xterm .xterm-message {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 100;
+    color: transparent;
+}
+
+.xterm .live-region {
+    position: absolute;
+    left: -9999px;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
+
+.xterm-dim {
+    opacity: 0.5;
+}
+
+.xterm-underline {
+    text-decoration: underline;
+}
+/* Our terminal or logs */
+.console-ct {
+    font-family: Menlo, Monaco, Consolas, monospace;
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 10px;
+    text-align: center;
+    line-height: normal;
+}
+
+@media (min-width: 568px) {
+    .console-ct {
+        font-size: 12px;
+    }
+}
+
+.console-ct > pre {
+    padding: 10px;
+    text-align: left;
+    display: block;
+    font-family: inherit;
+    font-size: inherit;
+    width: 48em;
+    height: 310px;
+    overflow-y: scroll;
+    white-space: pre-wrap;
+    margin: 0 auto;
+}
+
+.console-ct > .terminal {
+    color: #F0F0F0;
+    text-align: left;
+    outline: medium none;
+    background-color: black;
+    padding: 10px;
+    border-top: 1px solid black;
+    border-left: none;
+    border-right: none;
+    border-bottom: none;
+}
+
+.terminal .terminal-cursor {
+    border: 1px solid #f0f0f0;
+}
+
+.terminal:focus .terminal-cursor {
+    border: none;
+    animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+    from {
+        color: #000;
+        background: #f0f0f0;
+    }
+    50% {
+        color: #f0f0f0;
+        background: #000;
+    }
+}
+#cockpit_modal_dialog .modal-body.scroll {
+    max-height: calc(75vh - 10rem);
+    overflow: auto;
+}
+.plot-unit {
+    display:      inline-block;
+    width:        28px;
+    font-size:    smaller;
+    text-align:   right;
+    color:        #545454;
+    margin-right: 7px;
+}
+
+.plot-title {
+    color: black;
+}
+
+.flot-y-axis .flot-tick-label {
+    width: 28px;
+    margin-right: 7px;
+}
+
+.flot-x-axis .flot-tick-label {
+    margin-top: 3px;
+}
+
+.zoom-controls {
+    visibility: hidden;
+}
+
+.show-zoom-controls .zoom-controls {
+    visibility: visible;
+}
+
+.show-zoom-cursor .zoomable-plot {
+    cursor: ew-resize;
+}
+
+.standard-zoom-controls {
+    text-align:    right;       /* on the right */
+    margin-bottom: -15px;       /* overlapping with the title */
+    z-index:       1;           /* but on top of it */
+    position:      relative;
+}
+/* Panels don't draw borders between them */
+.panel > .table > tbody:first-child td {
+    border-top: 1px solid rgb(221, 221, 221);
+}
+
+/* Table headers should not generate a double border */
+.panel .table thead tr th {
+    border-bottom: none;
+}
+
+/* Fix panel heading alignment & mobile layout */
+
+.panel-heading {
+    align-items: center;
+    background: #f5f5f5;
+    display: flex;
+    flex-wrap: wrap;
+    /* 36px = (26px widget height) + (5px padding * 2) */
+    min-height: 36px;
+    padding: 5px 5px 5px 10px;
+    position: relative;
+    z-index: 100;
+}
+
+.panel-title {
+    font: inherit;
+    margin: 0;
+    padding: 0;
+}
+
+.panel-title > a {
+    color: #0088ceff; /* pf-blue-400 */
+    display: inline-block;
+}
+
+.panel-title > a:hover,
+.panel-title > a:focus {
+    color: #00659c; /* pf-blue-500 */
+}
+
+/* Allow children in the title to wrap */
+.panel-title > h3,
+.panel-title > a,
+.panel-title > div,
+.panel-title > span {
+    flex-shrink: 1;
+    word-break: break-all;
+}
+
+.panel-heading > :last-child:not(:first-child),
+.panel-heading > .pull-right,
+.panel-heading > .panel-heading-actions {
+    flex: auto;
+    text-align: right;
+}
+
+.panel-heading > .pull-right {
+    /* HACK: Pull right shouldn't be used to change document order. */
+    /* This CSS _also_ changes document order to replicate the float. */
+    /* Solution: Fix document order when pull-right is used. */
+    order: 100;
+}
+
+.panel-heading > .pull-right:first-child ~ :last-child {
+    /* Undo :last-child above for cases where pull-right is used before */
+    text-align: left;
+}
+
+@media screen and (max-width: 640px) {
+    /* Remove _most_ of the gaps on the sides of small screens */
+    /* to maximize space, but still keep the boxy panel look */
+    /* (container-fluid & page-ct adds 20px, so we remove 1/2 of that) */
+    .page-ct > .panel,
+    .container-fluid > .panel,
+    .col-md-12 > .panel {
+        margin-left: -10px;
+        margin-right: -10px;
+    }
+
+    .panel {
+        /* Background fade */
+        --hi-color: #d1d1d1;
+        --hi-color2: #eee;
+        --bg-color: #fff;
+        --hi-width: 20px;
+        --hi-width3: calc(var(--hi-width) * 3);
+        --transparent: rgba(255,255,255,0); /* WebKit needs white transparent */
+        max-width: 100vw;
+        overflow-x: auto;
+        position: relative;
+        background-image:
+          linear-gradient(to left, var(--bg-color) var(--hi-width), var(--transparent) var(--hi-width3)),
+          linear-gradient(to left, var(--hi-color) 1px, var(--transparent) 2px, var(--hi-color2) 4px, var(--bg-color) var(--hi-width)),
+          linear-gradient(to right, var(--bg-color) var(--hi-width), var(--transparent) var(--hi-width3)),
+          linear-gradient(to right, var(--hi-color) 1px, var(--transparent) 2px, var(--hi-color2) 4px, var(--bg-color) var(--hi-width));
+        background-attachment: local, scroll, local, scroll;
+        background-position: right, right, left, left;
+        background-repeat: no-repeat;
+        background-size: var(--hi-width3) 100%;
+    }
+
+    .panel > .panel-heading {
+        /* WebKit still needs -webkit- prefix for sticky */
+        position: -webkit-sticky;
+        position: sticky;
+        left: 0;
+        top: 0;
+    }
+
+    .panel .table thead th {
+        white-space: nowrap;
+    }
+
+    .panel .table:not(:hover):not(:focus):not(:active) {
+        background: transparent;
+    }
+    .panel .table thead:not(:hover):not(:focus):not(:active) {
+        background: transparent;
+    }
+}
+
+/*
+ * Fix up table row hovering.
+ *
+ * When you hover over table rows it's because they're clickable.
+ * Make the table row hover color match the list-group-item.
+ */
+.table-hover > tbody > tr > td,
+.table-hover > tbody > tr > th,
+.dialog-list-ct .list-group-item {
+    cursor: pointer;
+}
+.table-hover > tbody > tr:hover > td,
+.table-hover > tbody > tr:hover > th,
+.dialog-list-ct .list-group-item:hover:not(.active) {
+    background-color: #edf8ff;
+}
+
+/* Override patternfly to fit buttons and such */
+.table > thead > tr > th,
+.table > tbody > tr > td {
+    padding: 8px;
+}
+
+/* Override the heavy patternfly headers */
+.table > thead {
+    background-image: none;
+    background-color: #fff;
+}
+
+/* Make things line up */
+.table tbody tr > :first-child,
+.table thead tr > :first-child {
+    padding-left: 1.5rem;
+}
+
+.table tbody tr > :last-child,
+.table thead tr > :last-child {
+    padding-right: 1.5rem;
+}
+
+.info-table-ct > tbody > tr > th,
+.info-table-ct > tr > td,
+.info-table-ct > tbody > tr > td {
+    line-height: 26px;
+    vertical-align: baseline;
+}
+
+.info-table-ct > tr > th,
+.info-table-ct > tr > td,
+.info-table-ct > tbody > tr > th,
+.info-table-ct > tbody > tr > td {
+    padding-bottom: 0.5rem;
+}
+
+.info-table-ct > tr > td,
+.info-table-ct > tbody > tr > td {
+    overflow: hidden;
+    padding-left: 1rem;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.info-table-ct > tbody > tr > th,
+.info-table-ct > tr > td:first-child,
+.info-table-ct > tbody > tr > td:first-child {
+    font-weight: 600;
+    text-align: right;
+}
+
+.info-table-ct > tr > td button,
+.info-table-ct > tbody > tr > td button {
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.form-table-ct {
+    width: 100%;
+}
+
+.form-table-ct td {
+    padding-left: 0.75em;
+    padding-top: 0.25em;
+    line-height: 26px;
+}
+
+
+.form-table-ct td.top {
+    vertical-align: top;
+}
+
+.form-table-ct td:first-child {
+    text-align: right;
+    white-space: nowrap;
+    font-weight: 600;
+    width: 5px; /* will be expanded by nowrap */
+}
+
+
+.form-table-ct td[colspan] {
+    text-align: inherit;
+}
+
+.form-table-ct td {
+    height: 26px;
+}
+
+.form-table-ct td.header {
+    font-weight: bold;
+    text-align: left;
+    color: #4D5258;
+    padding: 20px 0 10px 0;
+}
+
+.form-table-ct label input[type='radio'],
+.form-table-ct label input[type='checkbox'] {
+    margin-right: 4px;
+}
+
+.form-table-ct label {
+    margin-bottom: 0px;
+}
+
+.form-table-ct label span {
+    vertical-align: super;
+}
+
+/* Break up sidebar in columns in smaller sizes*/
+
+@media (min-width: 992px) {
+    .info-table-ct-container .info-table-ct {
+        table-layout: fixed;
+        width: 100%;
+    }
+}
+.tooltip-ct-outer {
+    display:  inline-block;
+    position: relative;
+}
+
+.tooltip-ct-inner {
+    display:  inline-block;
+}
+
+/* Layout fix for tooltip arrows.
+ *
+ * Sometimes when there are non-integer coordinates involved
+ * somewhere, rounding seems to make it so that there is a visible one
+ * pixel gap between tooltip-inner and tooltip-arrow.  We avoid that
+ * gap by letting the arrow and inner parts overlap by one pixel.
+ *
+ * This happens within the caption of the content listing.
+ */
+
+.tooltip.top .tooltip-arrow {
+    bottom: 1px;
+}
+
+.tooltip.bottom .tooltip-arrow {
+    top: 1px;
+}
+/*
+ * This file is part of Cockpit.
+ *
+ * Copyright (C) 2015 Red Hat, Inc.
+ *
+ * Cockpit is free software; you can redistribute it and/or modify it
+ * under the terms of the GNU Lesser General Public License as published by
+ * the Free Software Foundation; either version 2.1 of the License, or
+ * (at your option) any later version.
+ *
+ * Cockpit is distributed in the hope that it will be useful, but
+ * WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * Lesser General Public License for more details.
+ *
+ * You should have received a copy of the GNU Lesser General Public License
+ * along with Cockpit; If not, see <http://www.gnu.org/licenses/>.
+ */
+#create-timer {
+    display: none;
+}
+.vertical-scroll {
+    max-height: 150px;
+    overflow-y: scroll;
+}
+
+.position-colon {
+    display: inline-block;
+}
+
+div#boot {
+    display: inline-block;
+    float: right;
+}
+
+div#boot-or-specific-time {
+    width: 170px;
+    display: inline-block;
+}
+
+div#drop-time {
+    width: 100px;
+    display: inline-block;
+}
+
+input#boot-time {
+    width: 50px;
+    display: inline-block;
+    position: relative;
+    top: 2px;
+}
+
+.hr, .min {
+    width:30px;
+    display: inline-block;
+}
+
+.form-inline {
+    background: #f4f4f4;
+    border-width: 0 1px 1px 1px;
+    border-style: solid;
+    border-color: #bababa;
+    padding: 4px;
+}
+
+#boot-label {
+    position: relative;
+    right: 8px;
+    white-space: nowrap;
+    color: #888888;
+}
+
+#repeat-time .form-inline:first-of-type {
+    border-top: 1px solid #bababa;
+}
+
+#repeat-time [data-content="month-days"] {
+    width: 75px;
+}
+
+#repeat-time [data-content="week-days"] {
+    width: 100px;
+}
+
+#repeat-time [data-content="close"] {
+    position: relative;
+    float: right;
+    right: 8px;
+    top: 2px;
+}
+
+#repeat-time [data-content="add"] {
+    position: relative;
+    float: right;
+    right: 4px;
+    top: 2px;
+}
+
+#repeat-time [data-provide="datepicker"] {
+    width: 120px;
+}
+
+[data-content='day-error'].repeat-error {
+    display: block;
+    font-size: 11px;
+    color: #4d5258;
+    line-height: 14px;
+}
+
+.has-error {
+    border-color: #cc0000;
+}
+
+.has-error:hover {
+    border-color: #990000;
+}
+
+.has-error:focus {
+    border-color: #990000;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #ff3333;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #ff3333;
+}
+
+.repeat-error {
+    display: block;
+    font-size: 11px;
+    color: #cc0000;
+    line-height: 14px;
+}
+
+#services-page .datepicker-dropdown .prev,
+#services-page .datepicker-dropdown .next {
+    display: none;
+    visibility: hidden;
+}
+
+.date {
+    width:120px;
+}
+
+#hr-error, #min-error {
+    font-size: 11px;
+    line-height: 13px;
+}
+
+.help-block {
+    position: relative;
+    bottom: 6px;
+}
+
+@media (min-width: 500px) {
+    .cockpit-timer-modal-md {
+        width: 500px;
+    }
+    .form-inline .form-control {
+        display: inline-block;
+        width: 30px;
+        vertical-align: middle;
+    }
+    .form-inline .date .bootstrap-datepicker {
+        width: 100px;
+    }
+}
+a.disabled {
+    text-decoration: none;
+    pointer-events: none;
+    cursor: default;
+    color: #000;
+}
+
+.popover {
+    max-width: none;
+    white-space: nowrap;
+}
+
+body {
+  /* Work around a pesky scrollbar on the page, due to 100% height */
+  height: auto;
+}
+
+.server-overview {
+    display: grid;
+    grid-gap: 0 2rem;
+    /* By default, horizontally stack the grid elements */
+    grid-template-areas: "motd" "info" "graphs";
+    grid-template-columns: 1fr;
+    margin: 2rem;
+    padding: 0;
+}
+
+@media screen and (min-width: 640px) {
+    /* Lay out overview in a grid, if there's enough width */
+    .server-overview {
+        grid-template-areas: "motd motd" "info graphs";
+        grid-template-columns: auto 1fr;
+    }
+}
+
+.server-overview > .info-table-ct-container {
+    grid-area: info;
+}
+
+.server-overview > .server-graphs {
+    grid-area: graphs;
+}
+
+.server-overview > .motd-box {
+    grid-area: motd;
+}
+
+/* Flot needs a little coaxing to behave */
+.server-graphs canvas,
+.server-graphs .flot-text {
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.systime-inline form .pficon-close,
+.systime-inline form .fa-plus {
+    height: 26px;
+    width: 26px;
+    padding: 4px;
+    float: right;
+    margin-left: 5px;
+}
+
+.systime-inline .form-inline {
+    background: #f4f4f4;
+    border-width: 0 1px 1px 1px;
+    border-style: solid;
+    border-color: #bababa;
+    padding: 4px;
+}
+
+.systime-inline .form-inline:first-of-type {
+    border-top: 1px solid #bababa;
+}
+
+.systime-inline .form-control {
+    margin: 0 4px;
+}
+
+.systime-inline .form-group:first-of-type .form-control {
+    margin: 0 4px 0 0;
+}
+
+.systime-inline .form-group .form-control {
+    width: 214px;
+}
+
+/* Make sure error message don't overflow the dialog */
+
+.realms-op-diagnostics {
+    max-width: 550px;
+    text-align: left;
+    max-height: 200px;
+}
+
+.realms-op-wait-message {
+    margin-left: 10px;
+    float: left;
+    margin-top: 3px;
+}
+
+/* leave some space towards the help block */
+#realms-op-address {
+    margin-bottom: 10px;
+}
+
+.realms-op-error .realms-op-more-diagnostics {
+  font-weight: normal;
+}
+
+/* leave some space between form and leave toggle */
+#realms-op-leave-toggle {
+    font-weight: bold;
+    line-height: 5rem;
+}
+
+/* standard PF alerts have a wide margin */
+.realms-op-leave-only-row .alert {
+    padding-left: 2ex;
+}
+
+.realms-op-leave-only-row .alert button {
+    margin: 1ex 0;
+}
+
+/* Other styles */
+
+.fa-red {
+    color: red;
+}
+
+.small-messages {
+    font-size: smaller;
+}
+
+#server-graph-toolbar .ct-select,
+#server-graph-toolbar .dropdown {
+    display: inline-block;
+}
+
+#server-graph-toolbar .dropdown-toggle span {
+    width: 6em;
+    text-align: left;
+    padding-left: 5px;
+    display: inline-block;
+}
+
+.server-graph {
+    height: 120px;
+}
+
+.server-graph-container {
+    display: grid;
+    grid-template: "title title" "graph legend";
+    grid-template-columns: 1fr max-content;
+}
+
+.server-graph-title {
+    grid-area: title;
+}
+
+.server-graph-graph {
+    grid-area: graph;
+}
+
+.server-graph-legend {
+    grid-area: legend;
+    float: right;
+    line-height: 24px;
+    list-style-type: none;
+    padding: 30px 40px 0 0;
+}
+
+.server-graph-legend li {
+    align-items: center;
+    display: flex;
+}
+
+.server-graph-legend i {
+    font-size: 16px;
+    margin-right: 0.5rem;
+    padding: 0;
+}
+
+.server-graph-legend .cpu-io-wait i {
+    color: #cc0000; /* pf-red-100 */
+}
+
+.server-graph-legend .cpu-kernel i {
+    color: #f5c12e; /* pf-orange-300 */
+}
+
+.server-graph-legend .cpu-user i {
+    color: #8461f2; /* pf-purple-300 */
+}
+
+.server-graph-legend .cpu-nice i {
+    color: #6eb664; /* pf-green-300 */
+}
+
+.server-graph-legend .memory-swap i {
+    color: #cc0000; /* pf-red-100 */
+}
+
+.server-graph-legend .memory-cached i {
+    color: #c8eb79; /* pf-light-green-200 */
+}
+
+.server-graph-legend .memory-used i {
+    color: #0088ce; /* pf-blue-400 */
+}
+
+.server-graph-legend .memory-free i {
+    color: #3f9c35; /* pf-green-400 */
+}
+
+#cpu_status_title {
+    padding: 20px 20px 0px 20px;
+    margin-bottom: -10px;
+    margin-left: 35px;
+}
+
+#cpu_status_graph,
+#memory_status_graph {
+    height: 400px;
+    padding: 20px;
+}
+
+#sich-note-1,
+#sich-note-2 {
+    margin: 0;
+}
+#shutdown-dialog td {
+  padding-right: 20px;
+  vertical-align: top;
+}
+
+#shutdown-dialog .opt {
+  padding: 1px 10px;
+}
+
+#shutdown-dialog .ct-select,
+#shutdown-dialog .dropdown {
+  min-width: 150px;
+}
+
+#shutdown-group {
+  overflow: visible;
+}
+
+#shutdown-dialog textarea {
+    resize: none;
+    margin-bottom: 10px;
+}
+
+#shutdown-dialog input {
+    display: inline;
+    width: 10em;
+}
+
+#shutdown-dialog .shutdown-hours,
+#shutdown-dialog .shutdown-minutes {
+    width: 3em;
+}
+
+#system_information_ssh_keys .list-group-item {
+    cursor: auto;
+}
+
+#system_information_hardware_text,
+#system_information_os_text,
+#system-information-enable-pcp-link {
+    overflow: visible;
+    white-space: normal;
+    word-wrap: break-word;
+}
+
+.system-information-updates > .fa,
+.system-information-updates > .spinner {
+    line-height: inherit;
+}
+.system-information-updates > .spinner {
+    /* Offset for alignment: 3px = 16px - 12px height - 1px border */
+    margin: 3px 0 0;
+}
+
+#system_machine_id {
+    display: inline-block;
+    font-family: monospace;
+    word-break: break-all;
+}
+
+@media (min-width: 500px) {
+  .cockpit-modal-md {
+    width: 400px;
+  }
+}
+
+/* Make sure to not break log message lines in order to preserve information */
+#journal-entry .info-table-ct td {
+    white-space: normal;
+    word-break: break-all;
+}
+
+#journal-entry .info-table-ct td:first-child {
+    white-space: normal;
+    word-break: keep-all;
+}
+
+.service-unit-description {
+    font-weight: bold;
+}
+
+.service-unit-data {
+    text-align: right;
+    white-space: nowrap;
+}
+
+@media screen and (max-width: 960px) {
+    .service-unit-data {
+        white-space: normal;
+    }
+}
+
+.service-unit-failed {
+    color: red;
+}
+
+.service-action-btn {
+    margin-left: 10px;
+}
+
+.service-action-btn ul {
+    right: 0px;
+    left: auto;
+    min-width: 0;
+    text-align: left;
+}
+
+.service-panel span {
+    font-weight: bold;
+}
+
+.service-panel table {
+    width: 100%;
+}
+
+.service-template input {
+    width: 50em;
+}
+
+#journal-current-day-menu dropdown-toggle {
+    padding-left: 10px;
+}
+
+.content-header-extra + #journal-box {
+    margin-top: 0.5rem;
+}
+
+#journal-entry-message:not(:empty) {
+    margin: 10px;
+}
+
+#journal-entry-fields {
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+#journal-entry-fields th {
+    font-weight: normal;
+}
+
+#accordion-markup {
+    margin-bottom: 0px;
+}
+
+.problem-btn {
+    float: right;
+    padding: 0px 5px 0px 5px;
+    margin-right: 10px;
+    margin-top: 4px;
+}
+
+.nav-tabs-pf > li:first-child > a {
+    padding-left: 20px;
+}
+
+.nav li a {
+    font-size: 13px;
+}
+
+.panel-heading.problem-panel{
+    cursor: pointer;
+}
+
+.detail_table > tbody > tr > td, .detail_table > thead > tr > th {
+    padding-right: 10px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.problem-panel {
+    background: none !important;
+    height: auto;
+}
+
+.problem-panel:hover {
+    background: #EDEDED !important;
+    height: auto;
+}
+
+.other-threads-btn {
+    margin-top: 20px;
+}
+
+.other_threads {
+    clear: both;
+}
+
+/* Extra content header */
+
+.content-header-extra {
+    background: #f5f5f5;
+    border-bottom: 1px solid #ddd;
+    padding: 10px 20px;
+    width: 100%;
+    position: sticky;
+    z-index: 900;
+    top: 0;
+}
+
+.content-header-extra .btn-group {
+    padding-left: 5px;
+    padding-right: 30px;
+}
+
+#motd {
+    background-color: transparent;
+    border: none;
+    font-size: 14px;
+    padding: 0px;
+    margin: 0px;
+    white-space: pre-wrap;
+}
+/*
+ * This file is part of Cockpit.
+ *
+ * Copyright (C) 2015 Red Hat, Inc.
+ *
+ * Cockpit is free software; you can redistribute it and/or modify it
+ * under the terms of the GNU Lesser General Public License as published by
+ * the Free Software Foundation; either version 2.1 of the License, or
+ * (at your option) any later version.
+ *
+ * Cockpit is distributed in the hope that it will be useful, but
+ * WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * Lesser General Public License for more details.
+ *
+ * You should have received a copy of the GNU Lesser General Public License
+ * along with Cockpit; If not, see <http://www.gnu.org/licenses/>.
+ */
+
+.cockpit-log-panel {
+    border: 0;
+}
+
+.cockpit-log-panel .panel-heading {
+    background-color: #333;
+    border-color: #333;
+    color: #fff;
+    padding-left: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    height: auto;
+}
+
+.cockpit-log-panel .panel-body {
+    padding: 0;
+    border-bottom: 1px #ddd solid;
+}
+
+.cockpit-log-panel .panel-body .panel-heading {
+    border-left: 1px #ddd solid;
+    border-right: 1px #ddd solid;
+    border-top: 0;
+    border-bottom: 1px #ddd solid;
+    background-color: #f5f5f5;
+    font-weight: bold;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    width: auto;
+    color: #333;
+}
+
+.cockpit-log-panel > .panel-heading:not(:first-child) {
+    margin-top: 15px;
+}
+
+.cockpit-log-panel .cockpit-logline {
+    border-left: 1px #ddd solid;
+    border-right: 1px #ddd solid;
+    background-color: #f5f5f5;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    padding-left: 10px;
+}
+
+.cockpit-logline {
+    font-family: monospace;
+    min-width: 310px;
+    border-bottom: 1px solid #DDD;
+    border-top: none;
+}
+
+.cockpit-logline > .row > div:first-child {
+    padding-left: 20px;
+}
+
+.cockpit-log-panel > .cockpit-logline:hover {
+    background-color: #def3ff; /* pf-blue-50 */
+}
+
+.cockpit-log-panel > .cockpit-logline:hover .cockpit-log-message {
+    color: #0088ce; /* pf-blue-400 */
+}
+
+.cockpit-log-panel > .cockpit-logline:hover {
+    cursor: pointer;
+}
+
+.cockpit-logmsg-reboot {
+    font-style: italic;
+}
+
+.cockpit-log-warning {
+    display: inline-block;
+    width: 20px;
+    vertical-align: middle;
+}
+
+.cockpit-log-warning > i {
+    color: black;
+}
+
+.cockpit-log-time {
+    display: inline-block;
+    width: 40px;
+    vertical-align: middle;
+}
+
+.cockpit-log-service {
+    width: 200px;
+    margin-left: 10px;
+}
+
+.cockpit-log-service-container {
+    display: inline-block;
+    width: 200px;
+    margin-left: 10px;
+}
+
+.cockpit-log-service-reduced {
+    width: -moz-calc(100% - 70px);
+    width: -webkit-calc(100% - 70px);
+    width: calc(100% - 70px);
+}
+
+.cockpit-log-message {
+    width: -moz-calc(100% - 300px);
+    width: -webkit-calc(100% - 300px);
+    width: calc(100% - 300px);
+}
+
+.cockpit-log-message,  .cockpit-log-service, .cockpit-log-service-reduced {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    display: inline-block;
+    white-space: nowrap;
+    vertical-align: middle;
+}
+
+
+/*# sourceMappingURL=system.css.map*/

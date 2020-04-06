@@ -27,7 +27,15 @@ var info = {
     },
     files: [
         "index.html",
+	"rules.html",
+	"host.html",
         "manifest.json",
+	"rimauwaf.png",
+	"services.css",
+	"bootstrap.min.js",
+	"bootstrap.min.css",
+	"popper.min.js",
+	"jquery-rimauwaf.min.js",
     ],
 };
 

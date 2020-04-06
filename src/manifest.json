@@ -3,8 +3,18 @@
 
     "menu": {
         "index": {
-            "label": "Rimau WAF"
+            "label": "Rimauwaf Home",
+	    "order" : 101
+        },
+	"rules": {
+            "label": "Rimauwaf Rules",
+            "order": 102
+        },
+        "host": {
+            "label": "Rimauwaf Host",
+            "order": 103
         }
+
     },
 
     "hacks": {

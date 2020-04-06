@@ -1,11 +1,9 @@
 {
     "version": 1,
-    "Name": "rimauwaf",
 
     "menu": {
         "index": {
-            "label": "Rimau WAF",
-            "path": "rimauwaf.html"
+            "label": "Rimau WAF"
         }
     },
 

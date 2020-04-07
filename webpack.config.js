@@ -36,6 +36,7 @@ var info = {
 	"bootstrap.min.css",
 	"popper.min.js",
 	"jquery-rimauwaf.min.js",
+	"rimauwaf.js",
     ],
 };
 

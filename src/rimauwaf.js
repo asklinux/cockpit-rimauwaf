@@ -58,7 +58,7 @@ function masalah_modsec(data){
 	$("#modsec").text(data);
 }
 
-function change(){
-	alert('test');
-	$("#modsecstat").html('ubah');
-}
+
+$("input[name]='tukar'").click(function(){
+	$("#modsecstat").text("test onclock");
+});

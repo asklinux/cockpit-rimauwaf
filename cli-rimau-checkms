@@ -1,0 +1,13 @@
+#!/bin/bash
+while getopts ":shv" opt; do
+  case $opt in
+    s)
+      /usr/bin/cat /etc/httpd/conf.d/mod_security.conf | grep "[^#]\sSecRuleEngine\\s.\+[Off|On|DetectionOnly]"
+      ;;
+    v) echo "Rimauwaf V 5.0";
+      ;;
+    \?)
+      echo "Invalid option: -$OPTARG" >&2
+      ;;
+  esac
+done

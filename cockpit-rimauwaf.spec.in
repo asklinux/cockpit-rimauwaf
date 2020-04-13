@@ -1,7 +1,7 @@
 Name: cockpit-rimauwaf
 Version: %{VERSION}
 Release: 1%{?dist}
-Summary: Cockpit Rimauwaf  Module
+Summary: Cockpit Rimauwaf  Module by tunnelbiz malaysia (hasnan)
 License: LGPLv2+
 
 Source: cockpit-rimauwaf-%{version}.tar.gz
@@ -18,7 +18,12 @@ Cockpit Rimauwaf Module
 %prep
 %setup -n cockpit-rimauwaf
 
+%build
+
 %install
+mkdir -p %{buildroot}/usr/bin/
+install -m 755 cli-rimau-checkms %{buildroot}/usr/bin/cli-rimau-checkms
+
 %make_install
 appstream-util validate-relax --nonet %{buildroot}/%{_datadir}/metainfo/*
 
@@ -28,5 +33,6 @@ find %{buildroot}%{_datadir}/cockpit/ -name '*.map' | xargs rm --verbose
 %files
 %{_datadir}/cockpit/*
 %{_datadir}/metainfo/*
+/usr/bin/cli-rimau-checkms
 
 %changelog

@@ -3,9 +3,57 @@ $(function() {
 	
 check_httpd();
 check_modsec();
+view_log();
+
+$("input[name = 'tukar']").change(function(){
+	
+
+	if ($(this).val() == 1){
+		var checkmodsec = cockpit.spawn(["cli-rimau-checkms","-o"]);
+		checkmodsec.catch(masalah_modsec);
+		checkmodsec.then(paparmodsec);
+		check_modsec();
+	}
+	else if ($(this).val() == 2){
+		var checkmodsec = cockpit.spawn(["cli-rimau-checkms","-f"]);
+		checkmodsec.catch(masalah_modsec);
+		checkmodsec.then(paparmodsec);
+		check_modsec();
+	}
+	else if ($(this).val() == 3){
+		var checkmodsec = cockpit.spawn(["cli-rimau-checkms","-p"]);
+		checkmodsec.catch(masalah_modsec);
+		checkmodsec.then(paparmodsec);
+		check_modsec();
+	}
+
+	
+	
+});
+
+$("#restart").on("click", function(data){
+
+	var runa = cockpit.spawn(["systemctl", "reload", "httpd"]);
+	runa.catch(status_a);
+	runa.then(status_a);
+
+	
+});
 
 });
 
+function view_log(){
+	var runa = cockpit.spawn(["tail", "-n10", "/var/log/httpd/modsec_audit.log"]);
+	runa.catch(status_a);
+	runa.then(status_a);
+}
+
+function status_a(data){
+
+	$("#appstat").text(data);
+	console.log("test")
+
+}
           
 function check_httpd() {
 
@@ -21,8 +69,9 @@ function check_modsec(){
 }
 function papar(data){
 
-	dp = '<div class="alert alert-success h-30"><strong>Apache Server Runing</strong><button class="btn btn-sm btn-warning float-right">Restart</button></div>';
-	$("#display").html(dp);
+	dp = 'Apache Server Runing';
+	$("#apachestat").html(dp);
+	$("#display").addClass('alert-success');
 
 }
 function masalah(data){
@@ -45,12 +94,15 @@ function paparmodsec(data){
 
 	if(cstat == 'SecRuleEngine On'){
 		psec = '<img src="onwaf.jpg"/>';
-	}else{
+	}
+	else if(cstat == 'SecRuleEngine Off'){
 		psec = '<img src="offwaf.jpg"/>';	
+	}
+	else{
+		psec = '<img src="logwaf.jpg"/>';	
 	}
 	
 	$("#modsecstat").html(psec);
-	//$("#modsec").text(cstat);
 
 	
 }
@@ -59,6 +111,3 @@ function masalah_modsec(data){
 }
 
 
-$("input[name]='tukar'").click(function(){
-	$("#modsecstat").text("test onclock");
-});

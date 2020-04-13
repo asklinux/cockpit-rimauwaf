@@ -12,6 +12,31 @@ git clone https://github.com/asklinux/cockpit-rimauwaf.git
 cd cockpit-rimauwaf
 make
 ```
+#Configure server
+
+install apache and mod_security
+```
+ $dnf -y install httpd
+$dnf -y install mod_security
+$cd /etc/httpd
+$git clone https://github.com/SpiderLabs/owasp-modsecurity-crs.git
+$cd owasp-modsecurity-crs
+$cp crs-setup.conf.example crs-setup.conf
+
+$touch /etc/httpd/conf.d/rimauwaf.conf
+
+vi /etc/httpd/conf.d/rimauwaf.conf
+```
+
+add configure in rimauwaf.conf
+
+<IfModule security2_module>
+Include owasp-modsecurity-crs/crs-setup.conf
+Include owasp-modsecurity-crs/rules/*.conf
+</IfModule>
+
+
+
 
 # Installing
 

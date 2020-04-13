@@ -39,6 +39,7 @@ var info = {
         "rimauwaf.js",
         "offwaf.jpg",
         "onwaf.jpg",
+	"logwaf.jpg",
     ],
 };
 

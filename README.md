@@ -14,9 +14,9 @@ make
 ```
 #Configure server
 
-install apache and mod_security
+install apache and mod_security on centos 8
 ```
- $dnf -y install httpd
+$dnf -y install httpd
 $dnf -y install mod_security
 $cd /etc/httpd
 $git clone https://github.com/SpiderLabs/owasp-modsecurity-crs.git

@@ -39,6 +39,7 @@ $("#restart").on("click", function(data){
 	
 	reload_apache();
 	
+	
 });
 
 });
@@ -50,7 +51,7 @@ function reload_apache(){
 }
 
 function view_log(){
-	var runa = cockpit.spawn(["tail", "-n20", "/var/log/httpd/modsec_audit.log"]);
+	var runa = cockpit.spawn(["tail", "-n30", "/var/log/httpd/modsec_audit.log"]);
 	runa.catch(status_log);
 	runa.then(status_log);
 }
@@ -58,7 +59,7 @@ function view_log(){
 function status_a(data){
 
 	$("#appstat").text(data);
-	
+	view_log();
 
 }
 function status_log(data){

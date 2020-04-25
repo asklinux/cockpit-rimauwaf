@@ -33,7 +33,6 @@ add configure in rimauwaf.conf
 ```
 <IfModule security2_module>
 Include owasp-modsecurity-crs/crs-setup.conf
-Include owasp-modsecurity-crs/rules/*.conf
 </IfModule>
 ```
 

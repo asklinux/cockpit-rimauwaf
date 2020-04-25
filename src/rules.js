@@ -5,7 +5,7 @@ $(function() {
    
 
     $("body").delegate("#aktif", "click", function(){
-        alert("Delegated Button Clicked")
+        alert($(this).val());
     });
 
 });

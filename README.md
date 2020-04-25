@@ -1,5 +1,7 @@
 # Cockpit Rimauwaf Plugin
 
+![Screenshot](panel.png)
+
 Scaffolding for a [Cockpit](http://www.cockpit-project.org) module.
 
 # Getting and building the source

@@ -42,6 +42,13 @@ $("#restart").on("click", function(data){
 	
 });
 
+$("#live").on("click", function(data){
+
+	refresh();
+	
+	
+});
+
 });
 
 function reload_apache(){
@@ -51,7 +58,7 @@ function reload_apache(){
 }
 
 function view_log(){
-	var runa = cockpit.spawn(["tail", "-n30", "/var/log/httpd/modsec_audit.log"]);
+	var runa = cockpit.spawn(["tail", "-n20", "/var/log/httpd/modsec_audit.log"]);
 	runa.catch(status_log);
 	runa.then(status_log);
 }
@@ -67,7 +74,9 @@ function status_log(data){
 	
 	data.split("msg").forEach(function(entry) {
 		if (entry)
-			$("#appstat").append('<li class="list-group-item">'+entry+'</li>');
+			$("#appstat").prepend('<li class="list-group-item list-group-item-warning">'+entry+'</li>');
+			//$("#appstat").append('<li class="list-group-item">'+entry+'</li>');
+			
 	});
 	
 }

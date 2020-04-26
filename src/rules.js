@@ -5,14 +5,17 @@ $(function() {
    
 
     $("body").delegate("#aktif", "click", function(){
-        alert($(this).val());
+        var rules = $(this).val();
+        var addrule = cockpit.spawn(["ln","-s",rules ,"/etc/httpd/modsecurity.d/activated_rules/"]);
+        addrule.catch(masalah_load);
+        addrule.then(papar_rules);
     });
 
 });
 
 
 
-function load_rules(){
+    function load_rules(){
         var listrules = cockpit.spawn(["cli-rimau-checkms","-r"]);
         listrules.catch(masalah_load);
         listrules.then(papar_rules);
@@ -20,7 +23,7 @@ function load_rules(){
     }
     
     function masalah_load(data){
-        $("#info").html("No data loaded..");
+        $("#info").html(data);
     }
     function papar_rules(data){
     
